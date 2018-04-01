@@ -110,7 +110,6 @@
 				$('#effect-1').show();
 				$('#effect-1').addClass('visible');
 				$('h1').text('Löysit uuden munan!');
-				$('.subtitle').text('Älä vielä lopeta!')
 			}
 			else if (totalPressCount < required * 4) {
 				$('#effect-1').addClass('stage2');
@@ -122,15 +121,19 @@
 			}
 			else if (totalPressCount < required * 6) {
 				$('#effect-1').addClass('stage4');
+				$('.subtitle').text('Viis munaa takana, mutta kuinka monta edessä?')
 			}
 			else if (totalPressCount < required * 7) {
 				$('#egg-wrapper').addClass('stage5');
+				$('.subtitle').text('');
 			}
 			else if (totalPressCount < required * 8) {
 				$('#egg-wrapper').addClass('stage6');
+				$('.subtitle').text('Tämä onkin vähän ketterämpi pikku muna!')
 			}
 			else if (totalPressCount < required * 9) {
 				$('#egg-wrapper').addClass('stage7');
+				$('.subtitle').text('SURVIVAL MODE');
 				required = 10000;
 				var minutes = Math.floor((Date.now() - startTime) / 60000);
 				window.alert('Olet nyt käyttänyt munien paineluun yli' + minutes + ' minuuttia elämästäsi, ja samalla läpäissyt tämän pelin. Wappukukan toimitus kannustaa kuitenkin pääsiäismielen riittäessä jatkamaan pelaamista tämän jälkeen alkavassa survival-moodissa, jossa hauska ei ikinä lopu!');
